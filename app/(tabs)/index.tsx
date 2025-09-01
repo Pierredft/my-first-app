@@ -1,15 +1,12 @@
-import Human from "@/components/Human/Human";
-import { ThemedText } from "@/components/ThemedText";
-import { ThemedView } from "@/components/ThemedView";
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { FlexDemo } from '../../components/FlexDemo';
 
 export default function HomeScreen() {
   return (
-    <ThemedView style={{ flex: 1, justifyContent: "center", alignItems: "center"}} >
-      <Human />
-      <Human />
-      <ThemedText>
-        Fin de l écran
-      </ThemedText>
-    </ThemedView>
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1 }}>
+        <FlexDemo />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
